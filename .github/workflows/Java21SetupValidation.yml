@@ -30,4 +30,4 @@ jobs:
           github-app-auth-only: true
           github-repository: "chiranjib-swain/javatest"
           author-email: "196914770+chiranjib-swain@users.noreply.github.com"
-          author-name: "Scala Steward"
+          author-name: "Chiranjjib Swain"
