@@ -1,0 +1,26 @@
+name: Test Java Setup
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scala-steward:
+    runs-on: ubuntu-latest
+    name: Launch Scala Steward
+    steps:
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'adopt'
+          java-version: '21'
+
+      - name: Install sbt
+        uses: sbt/setup-sbt@v1
+
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: Launch Scala Steward
+        uses: scala-steward-org/scala-steward-action@v2
+        with:
+          github-token: ${{ secrets.REPO_GITHUB_TOKEN }}
